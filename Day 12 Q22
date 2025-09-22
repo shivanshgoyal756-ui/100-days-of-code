@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+
+int main() {
+    float cp,sp,pp;
+  
+    printf("Enter the sp and cp sides");
+    scanf("%f%f",&sp,&cp);
+    
+    if(sp>cp)
+    {
+        pp=(sp-cp)/sp*100.0;
+        printf("The profit percent is:%f",pp);
+    }
+    else
+    {
+        if(cp>sp)
+        {
+            pp=(cp-sp)/cp*100.0;
+            printf("The profit percent is:%f",pp);
+        }
+        else
+        printf("No profit no loss");
+    }
+   
+    return 0;
+}
