@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+   int a,b;
+   printf("The two numbers are:");
+   scanf("%d%d",&a,&b);
+   int c=a+b;
+   printf("\nthe sum is %d",c);
+   int d=a-b;
+   printf("\n the diff is %d",d);
+   int mu=a*b;
+   int div=a/b;
+   printf("\n the multiplication is %d",mu);
+   printf("\n the quotient is %d",div);
+    return 0;
+}
