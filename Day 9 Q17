@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float a, b, c, dis, root1, root2, rp, ip;
+
+
+    printf("Enter coefficients a, b, and c: ");
+    scanf("%f %f %f", &a, &b, &c);
+    dis = b * b - 4 * a * c;
+
+   
+     if (dis == 0) 
+     {
+       
+        root1 = root2 = -b / (2 * a);
+        printf("Roots are real and equal.\n");
+        printf("Root 1 = Root 2 = %f\n", root1);
+     }
+    else{  
+        if (dis > 0) {
+        
+        root1 = (-b + sqrt(dis)) / (2 * a);
+        root2 = (-b - sqrt(dis)) / (2 * a);
+        printf("Roots are real and distinct.\n");
+        printf("Root 1 = %f\n", root1);
+        printf("Root 2 = %f\n", root2);
+         } else {
+        
+        rp = -b / (2 * a);
+        ip = sqrt(-dis) / (2 * a);
+        printf("Roots are complex and imaginary.\n");
+        printf("Root 1 = %f + %fi\n", rp, ip);
+        printf("Root 2 = %f - %fi\n", rp, ip);
+    }
+    }
+
+    return 0;
+}
