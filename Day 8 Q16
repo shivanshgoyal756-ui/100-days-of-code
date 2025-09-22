@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int a,b,c;
+    printf("Enter the three num");
+    scanf("%d%d%d",&a,&b,&c);
+    int l=0;
+    if(a<b)
+    l=b;
+    else
+    l=a;
+    if(l<c)
+    l=c;
+    printf("The largest number is:%d",l);
+    
+    return 0;
+}
