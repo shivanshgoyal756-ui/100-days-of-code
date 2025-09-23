@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    int units;
+    int sum=0;
+    printf("Enter the amount of units consumed");
+    scanf("%d",&units);
+    if(units<=100)
+    sum=units*5;
+    else
+    {
+        if(units>100&&units<=200)
+        {
+          sum=500;
+          units=units-100;
+          sum=sum+units*7;
+        }
+        else
+        {
+            if(units>200&&units<=300)
+            {
+                sum=1200;
+                units=units-200;
+                sum=sum+units*10;
+            }
+            else
+            {
+                sum=2200;
+                units=units-300;
+                sum=sum+units*12;
+            }
+        }
+    }
+    printf("the price to be paided is: %d",sum);
+
+    return 0;
+
+}
