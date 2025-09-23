@@ -1,0 +1,26 @@
+#include <stdio.h>
+void rev(int num)
+{
+    int neww=0;
+    int temp=num;
+    int sum=0;
+    while(num>0)
+    { 
+        sum=sum+(num%10)*(num%10)*(num%10);
+        num=num/10;
+    }
+    if(temp==sum)
+    printf("The number is amstrong number");
+    else
+    printf("The number is not Amstrong number");
+    
+    
+}
+
+int main() {
+    int num;
+    printf("Enter the number");
+    scanf("%d",&num);
+    rev(num);
+    return 0;
+}
