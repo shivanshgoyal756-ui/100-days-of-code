@@ -1,0 +1,32 @@
+ int main() {
+      int num;
+      int sum=0;
+    printf("Enter how many number are to be stored");
+    scanf("%d",&num);
+    int n[num];
+    
+     for(int i=1;i<=num;++i)
+    {
+        printf("num");
+        scanf("%d",&n[i]);
+    }
+    int max=0;
+    int min=0;
+    int z=0;
+     for(int j=1;j<=num;++j)
+    {
+       if(n[j]>0)
+       max++;
+       else 
+       {
+        if(n[j]<0)
+        min++;
+        else
+        z++;
+       }
+    }
+     printf("the positive no  %d",max);
+     printf("\nthe negative no  %d",min);
+     printf("\nthe zero no %d",z);
+    return 0;
+}
