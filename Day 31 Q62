@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+      int num;
+      int sum=0;
+    printf("Enter how many number are to be stored");
+    scanf("%d",&num);
+    int n[num];
+    
+     for(int i=0;i<=num-1;++i)
+    {
+        printf("num");
+        scanf("%d",&n[i]);
+    }
+    printf("\n");
+  
+      for(int j=num-1;j>=0;--j)
+    {
+      printf("%d",n[j]);
+    }
+    return 0;
+}
