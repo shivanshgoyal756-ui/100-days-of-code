@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int num,dig,ls,fd,mp,ne;
+    ls=0;
+    ne=0;
+    printf("Enter the number");
+    scanf("%d",&num);
+    ls=(num%10);
+    dig=(int)log10(num);
+    fd=num/(int)pow(10,dig);
+    mp=num%(int)pow(10,dig);
+    mp=mp/10;
+    ne=ls*(int)pow(10,dig)+mp*10+fd;
+    printf("\nThe number is : %d",ne);
+    
+    
+
+return 0;
+}
