@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+  int main() {
+      int num;
+      int sum=0;
+    printf("Enter how many number are to be stored");
+    scanf("%d",&num);
+    int n[num];
+    
+     for(int i=1;i<=num;++i)
+    {
+        printf("num");
+        scanf("%d",&n[i]);
+    }
+    int max=0;
+    int min=0;
+     for(int j=1;j<=num;++j)
+    {
+       if(n[j]%2==0)
+       max++;
+       else
+       min++;
+    }
+     printf("the even no  %d",max);
+      printf("\nthe odd no  %d",min);
+    return 0;
+}
