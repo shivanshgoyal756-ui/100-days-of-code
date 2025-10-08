@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+   int a,b;
+   printf("Enter the two numbers:");
+   scanf("%d%d",&a,&b);
+   int aa=a;
+   int bb=b;
+   while(b!=0)
+   {
+       int t=b;
+       b=a%b;
+       a=t;
+   }
+   int lcm=(aa*bb)/a;
+   printf("Tne lcf is %d",lcm);
+    return 0;
+}
