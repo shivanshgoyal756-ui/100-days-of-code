@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+int main() {
+   int n,m;
+   printf("Enter the row number and column number :");
+   scanf("%d%d",&n,&m);
+   int mat[n][m];
+   for(int i=0;i<n;++i)
+   {
+       for(int j=0;j<m;++j)
+       {
+           printf("enter the number of %d row :",i+1);
+           scanf("%d",&mat[i][j]);
+       }
+   }
+   int d=0;
+   int s=0;
+    if(n<m)
+    {
+        d=n*2;
+        s=n;
+    }
+    if(n>m)
+    {
+        d=m*2;
+        s=m;
+    }
+    if(m==n)
+    {
+        d=m*2-1;
+        s=n;
+    }
+   for(int a=0;a<=d-1;++a)
+   {  if(a>=s)
+{
+         for(int p=a;p<=d-1;++p)
+      {
+          if(a%2==0)
+          printf("%d ",mat[a-(p-(n-1))][p-(n-1)]);
+          else
+          printf("%d ",mat[p-(n-1)][a-(p-(n-1))]);
+      }
+     }
+       
+   
+     else
+     {
+         for(int b=0;b<=a;++b)
+      {
+          if(a%2==0)
+          printf("%d ",mat[a-b][b]);
+          else
+          printf("%d ",mat[b][a-b]);
+      }
+     }
+      
+      
+   }
+return 0;
+}
