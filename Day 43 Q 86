@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+   char str[100];
+   printf("Enter the string");
+   scanf("%s",str);
+   int c=0;
+   int d=0;
+   for(int i=0;str[i]!='\0';++i)
+   {
+     c=i;
+     
+   }
+   char im[c];
+   
+   for(int i=c;i>=0;--i)
+   {
+       im[d]=str[i];
+       ++d;
+   }
+   int f=0;
+  for(int i=0;i<=c;++i)
+  {
+      if(str[i]==im[i])
+      ++f;
+  }
+  
+   if(f==c+1)
+   printf("Palindrome");
+   else
+   printf("Not Palindrome");
+   
+   
+return 0;
+}
