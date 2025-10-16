@@ -1,0 +1,16 @@
+
+#include <stdio.h>
+
+int main() {
+   char str[50];
+   printf("Enter the string");
+   scanf("%s",str);
+   int c=0;
+   for(int i=0;str[i]!='\0';++i)
+   {
+       ++c;
+   }
+   printf("the number of characters are  %d",c);
+   
+    return 0;
+}
