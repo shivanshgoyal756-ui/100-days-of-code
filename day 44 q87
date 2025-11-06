@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+   char str[100];
+   printf("Enter the string");
+   scanf("%s",str);
+   int space=0;
+   int dig=0;
+   int special=0;
+   for(int i=0;atr[i]!='\0';++i)
+   {
+     if((int)str[i]==32)
+     {
+         ++space;
+     }
+     else 
+     {
+         if((int)str[i]<=57&&(int)str[i]>=48)
+         {
+             ++dig;
+         }
+         else
+         {
+             if((int)str[i]<=90&&(int)str[i]>=65||(int)str[i]<=122&&(int)str[i]>=97);
+             else
+             ++special;
+         }
+     }
+     
+   }
+   printf("\nhe number of spaces are %d",space);
+   printf("\nthe number of digits are %d",dig);
+   printf("\nthe number of specail characters are %d",special);
+   
+   return 0;
+}
