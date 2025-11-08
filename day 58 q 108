@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+   int num;
+   printf("Enter how many number are to be inputed");
+   scanf("%d",&num);
+   int a[num];
+   int b[num];
+   int sum1=1;
+   printf("\nEnter the array numbers");
+   for(int i=0;i<num;++i)
+   {
+       scanf("%d",&a[i]);
+   }
+   for(int i=0;i<num;++i)
+   {
+      for(int j=0;j<num;++j)
+      {
+          
+          if(a[j]!=a[i])
+          {
+           sum1=sum1*a[j];
+          }
+          
+      }
+     b[i]=sum1;
+     sum1=1;
+   }
+   for(int i=0;i<num;++i)
+   {
+       
+       printf("\n%d",b[i]);
+   }
+    return 0;
+}
