@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int main() {
+    char str[100];
+    int c=0;
+    int d;
+    int start=0,end=0;
+    printf("Enter a string");
+    scanf("%[^\n]",str);
+int large=0;
+    int r=0;
+    int len=strlen(str);
+    for(int i=0;i<len;++i)
+    {
+        for(int j=i;j<len;++j)
+        {
+            for(int z=i;z<=j;++z)
+            {
+               for(int a=z+1;a<=j;++a)
+               {
+                   if(str[a]==str[z])
+                   {
+                       d=0;
+                       break;
+                   }
+                   else
+                   ++c;
+                   
+               }
+                    
+                
+                
+            }
+            if(c>large&&d!=0)
+            
+            {
+            large=j-i+1;
+            start=i;
+            end=j;
+            }
+            c=0;
+        }
+     
+    }
+    for(int q=start;q<=end;++q)
+    {
+        printf("%c",str[q]);
+    }
+    return 0;
+}
