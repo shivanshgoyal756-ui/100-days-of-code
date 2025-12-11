@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+typedef enum {
+    RED = 1,
+    GREEN = 2,
+    BLUE = 3
+} Color;
+
+const char* color_names[] = { "RED", "GREEN", "BLUE" };
+const int color_values[] = { RED, GREEN, BLUE };
+
+int main() {
+    int count = sizeof(color_values) / sizeof(color_values[0]);
+
+    for (int i = 0; i < count; i++) {
+        printf("%s = %d\n", color_names[i], color_values[i]);
+    }
+}
